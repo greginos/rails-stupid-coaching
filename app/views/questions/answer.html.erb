@@ -1,0 +1,23 @@
+<div class="conversation question">
+  <h3><%= @question %></h3>
+  <h4>-You </h4>
+</div>
+
+<div class="conversation answer">
+  <% if @question == 'I am going to work' %>
+  <h3>
+    <%= "Great!" %>
+  </h3>
+  <% elsif @question.include? "?" %>
+  <h3>
+    <%= "Silly question, get dressed and go to work!"  %>
+  </h3>
+  <% else %>
+  <h3>
+    <%= "I don't care, get dressed and go to work!" %>
+  </h3>
+  <% end %>
+  <h4>-Your coach </h4>
+</div>
+
+<%= link_to "Ask another question", ask_path %>
